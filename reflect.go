@@ -21,8 +21,8 @@ func ReadField(value any) {
 	for i := 0; i < ValueType.NumField(); i++ {
 		structField := ValueType.Field(i)
 		fmt.Println(structField.Name, "with type", structField.Type)
-		fmt.Println(structField.Tag.Get("required"))
-		fmt.Println(structField.Tag.Get("max"))
+		fmt.Println("required :", structField.Tag.Get("required"))
+		fmt.Println("max:", structField.Tag.Get("max"))
 
 	}
 }
